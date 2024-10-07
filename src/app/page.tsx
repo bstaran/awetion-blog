@@ -5,6 +5,8 @@ import siteConfig from '@root/site.config'
 import PixelTitle from '@/components/PixelTitle'
 import { getSortedTagCounts } from '../lib/getSortedTagCounts'
 
+export const revalidate = 10
+
 export default async function MainPage() {
   const databaseId = siteConfig.rootNotionPageId
   const pages = await getDatabasePages(databaseId)

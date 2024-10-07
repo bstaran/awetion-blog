@@ -2,6 +2,8 @@ import { getDatabasePages } from '@/lib/notion'
 import siteConfig from '@root/site.config'
 import { Pages } from '@/components/Pages'
 
+export const revalidate = 10
+
 export default async function TagPosts({
   params,
 }: {
