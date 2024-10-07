@@ -20,7 +20,7 @@ export const Pages: React.FC<PagesProps> = ({ pages, tag }) => {
               <div className="flex-grow">
                 <h3 className="text-m font-semibold text-gray-700">
                   {post.properties['Name']
-                    ? post.properties['Name'][0][0]
+                    ? post.properties['Name']
                     : 'Untitled'}
                 </h3>
                 <div className="mt-1 flex flex-wrap gap-2">

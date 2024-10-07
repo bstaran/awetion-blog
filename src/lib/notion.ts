@@ -38,6 +38,12 @@ export async function getDatabasePages(
           // Tags 속성 처리
           const tagValues = block.value.properties[key][0][0]
           pageProperties[value.name] = tagValues.split(',')
+        } else if (value.name === 'Name' && block.value.properties?.[key]) {
+          // Name 속성 처리
+          pageProperties[value.name] = block.value.properties[key]
+            .flat()
+            .filter((item: string) => typeof item === 'string')
+            .join('')
         } else {
           pageProperties[value.name] = block.value.properties?.[key] ?? null
         }
@@ -63,7 +69,7 @@ export async function getDatabasePages(
       return dateB - dateA
     })
 
-  // console.log('pages: ', pages)
+  console.log('pages: ', JSON.stringify(pages[0].properties, null, 2))
 
   return pages
 }
