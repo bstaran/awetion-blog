@@ -1,9 +1,10 @@
 import { SiteConfig } from './types'
 
 const validateConfig = (config: SiteConfig): SiteConfig => {
-  //TODO: Validate the config object
-  console.log('validate: ', config.rootNotionPageId)
-
+  if (!config.rootNotionPageId) {
+    throw new Error('ROOT_NOTION_PAGE is not set in environment variables')
+  }
+  console.log('Root Notion Page ID:', config.rootNotionPageId)
   return config
 }
 
