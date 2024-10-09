@@ -3,7 +3,7 @@ import { root } from 'postcss'
 
 const config = siteConfig({
   rootNotionPageId: process.env.ROOT_NOTION_PAGE || '',
-  domain: process.env.DOMAIN || '',
+  // domain: process.env.DOMAIN || '',
   title: process.env.TITLE || '',
   description: process.env.DESCRIPTION || '',
   mainPageTitle: process.env.NEXT_PUBLIC_MAIN_PAGE_TITLE || '',

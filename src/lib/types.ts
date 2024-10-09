@@ -16,7 +16,7 @@ export interface PagesProps {
 
 export interface SiteConfig {
   readonly rootNotionPageId: string
-  readonly domain: string
+  // readonly domain: string
   readonly title: string
   readonly description: string
   readonly mainPageTitle: string

@@ -28,12 +28,12 @@ export async function getDatabasePages(
     pages = Object.values(recordMap.block ?? {})
       .filter(
         (block) =>
-          block?.value &&
+          block.value &&
+          block.value.parent_id &&
           block.value.parent_id === collection.id &&
           block.value.type === 'page',
       )
       .map((block) => {
-        if (!block?.value) return null
         const pageProperties = {} as Record<string, any>
         Object.entries(schema).forEach(([key, value]) => {
           if (value.name === 'Date' && block.value.properties?.[key]) {
@@ -61,7 +61,6 @@ export async function getDatabasePages(
           parent_id: block.value.parent_id,
         }
       })
-      .filter((page) => page !== null)
       .filter((page) => {
         if (tag === 'All Posts') return true
         return page.properties.Tags && page.properties.Tags.includes(tag)
