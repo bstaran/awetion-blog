@@ -18,7 +18,7 @@ export const Pages: React.FC<PagesProps> = ({ pages, tag }) => {
           >
             <div key={index} className="flex justify-between items-center">
               <div className="flex-grow">
-                <h3 className="text-m text-gray-700">
+                <h3 className="text-m text-gray-700 md:font-semibold">
                   {post.properties['Name']
                     ? post.properties['Name']
                     : 'Untitled'}
@@ -29,7 +29,7 @@ export const Pages: React.FC<PagesProps> = ({ pages, tag }) => {
                     post.properties['Tags'].map((tag, tagIndex) => (
                       <span
                         key={tagIndex}
-                        className="inline-block bg-blue-100 rounded-sm px-1.5 py-0.5 text-xs font-semibold text-stone-700 opacity-85"
+                        className="inline-block bg-blue-100 rounded-sm px-1.5 py-0.5 text-xs md:font-semibold text-stone-700 opacity-85"
                       >
                         {tag}
                       </span>
