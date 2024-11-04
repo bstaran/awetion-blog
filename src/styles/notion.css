@@ -140,7 +140,7 @@ html {
   line-height: 1.5;
   color: var(--fg-color);
   caret-color: var(--fg-color);
-  font-family: var(--notion-font);
+  font-family: inherit !important;
 }
 
 .notion > * {
@@ -550,6 +550,7 @@ html {
   align-items: flex-start;
   width: 100%;
   max-width: 100%;
+  font-family: inherit !important;
 }
 
 .notion-full-page {
@@ -866,6 +867,7 @@ svg.notion-page-icon {
   word-break: break-word;
   padding: 3px 2px;
   margin: 6px 0;
+  font-family: inherit !important;
 }
 
 .notion-text:first-child {
@@ -874,8 +876,6 @@ svg.notion-page-icon {
 
 .notion-text-children {
   padding-left: 1.5em;
-  display: flex;
-  flex-direction: column;
 }
 
 .notion .notion-code {

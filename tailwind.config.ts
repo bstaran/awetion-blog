@@ -72,6 +72,18 @@ const config = {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
       },
+      fontFamily: {
+        pretendard: ['var(--font-pretendard)'],
+        nunito: ['var(--font-nunito)'],
+        inter: ['var(--font-inter)'],
+        sans: [
+          'var(--font-nunito)',
+          'var(--font-pretendard)',
+          'var(--font-inter)',
+          'system-ui',
+          'sans-serif',
+        ],
+      },
     },
   },
   plugins: [require('tailwindcss-animate')],

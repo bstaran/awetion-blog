@@ -5,7 +5,7 @@ import { PagesProps } from '@/lib/types'
 export const Pages: React.FC<PagesProps> = ({ pages, tag }) => {
   return (
     <>
-      <h2 className="text-2xl text-center font-bold text-gray-700 dark:text-gray-400 mt-8 mb-8">
+      <h2 className="text-2xl text-center font-semibold text-gray-700 dark:text-gray-400 mt-8 mb-8">
         {tag}
       </h2>
 
@@ -18,7 +18,7 @@ export const Pages: React.FC<PagesProps> = ({ pages, tag }) => {
           >
             <div key={index} className="flex justify-between items-center">
               <div className="flex-grow">
-                <h3 className="text-m font-semibold text-gray-700">
+                <h3 className="text-m text-gray-700">
                   {post.properties['Name']
                     ? post.properties['Name']
                     : 'Untitled'}
