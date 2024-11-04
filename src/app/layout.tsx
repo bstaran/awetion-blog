@@ -1,6 +1,6 @@
 import { Metadata } from 'next'
 import localFont from 'next/font/local'
-import { Nunito, Inter } from 'next/font/google'
+import { Nunito_Sans, Inter, Noto_Sans_KR } from 'next/font/google'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 import { Analytics } from '@vercel/analytics/react'
 import siteConfig from '@root/site.config'
@@ -14,10 +14,10 @@ export const metadata: Metadata = {
   description: siteConfig.description,
 }
 
-const nunito = Nunito({
+const nunitoSans = Nunito_Sans({
   subsets: ['latin'],
-  weight: ['400', '700'],
-  variable: '--font-nunito',
+  weight: ['400', '500', '600', '700'],
+  variable: '--font-nunito-sans',
 })
 
 const inter = Inter({
@@ -41,7 +41,7 @@ export default function RootLayout({ children }: LayoutProps) {
       <body
         className={cn(
           pretendard.variable,
-          nunito.variable,
+          nunitoSans.variable,
           inter.variable,
           'antialiased',
           'selection:bg-gray-200 dark:selection:bg-gray-800',

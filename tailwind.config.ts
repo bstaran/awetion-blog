@@ -73,13 +73,10 @@ const config = {
         'accordion-up': 'accordion-up 0.2s ease-out',
       },
       fontFamily: {
-        pretendard: ['var(--font-pretendard)'],
-        nunito: ['var(--font-nunito)'],
-        inter: ['var(--font-inter)'],
         sans: [
-          'var(--font-nunito)',
-          'var(--font-pretendard)',
           'var(--font-inter)',
+          'var(--font-pretendard)',
+          'var(--font-nunito-sans)',
           'system-ui',
           'sans-serif',
         ],
