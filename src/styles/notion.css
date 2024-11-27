@@ -211,16 +211,45 @@ html {
   }
 }
 
+nav.notion-table-of-contents {
+  overflow: auto;
+
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.notion-table-of-contents::-webkit-scrollbar {
+  display: none;
+}
+
+.notion-table-of-contents:hover {
+  scrollbar-width: auto;
+  -ms-overflow-style: auto;
+}
+
+.notion-table-of-contents:hover::-webkit-scrollbar {
+  display: block;
+  width: 6px;
+}
+
+.notion-table-of-contents:hover::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 5px;
+}
+
 .notion-aside-table-of-contents {
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-height: calc(100vh - 148px - 16px);
+  max-height: calc(70vh - 148px - 16px);
   min-width: 222px;
-  overflow: auto;
   background: var(--bg-color);
   border-radius: 4px;
   margin: 0 calc(10vw - 80px);
+}
+
+.notion-aside-table-of-contents:hover::-webkit-scrollbar {
+  display: block;
 }
 
 .notion-aside-table-of-contents-header {
@@ -710,7 +739,7 @@ svg.notion-page-icon {
   border-left: 3px solid currentcolor;
   padding: 0.2em 0.9em;
   margin: 6px 0;
-  font-size: 1.2em;
+  font-size: 16px;
 }
 
 .notion-hr {
@@ -2030,7 +2059,7 @@ pre[class*='language-'] {
 .notion-equation-block {
   display: flex;
   flex-direction: column;
-  overflow: auto;
+  overflow: hidden;
   width: 100%;
   max-width: 100%;
   padding: 4px 8px;
