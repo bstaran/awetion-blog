@@ -58,6 +58,10 @@ const Collection = dynamic(() =>
   ),
 )
 
+const Equation = dynamic(() =>
+  import('react-notion-x/build/third-party/equation').then((m) => m.Equation),
+)
+
 export const Renderer = ({ recordMap }: RendererProps) => {
   const [loading, setLoading] = useState(false)
 
@@ -71,7 +75,7 @@ export const Renderer = ({ recordMap }: RendererProps) => {
     <div className="notion__container">
       <NotionRenderer
         recordMap={recordMap}
-        components={{ Collection, Code }}
+        components={{ Collection, Code, Equation }}
         fullPage={true}
         darkMode={false}
         previewImages
